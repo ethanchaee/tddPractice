@@ -3,6 +3,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm") version "1.4.32"
     application
+    id("org.jlleitschuh.gradle.ktlint") version "10.0.0"
+    id("org.jlleitschuh.gradle.ktlint-idea") version "10.0.0"
 }
 
 group = "me.aschae"
@@ -17,8 +19,8 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.0")
     testImplementation("io.kotest:kotest-framework-engine:4.6.2")
-    testImplementation ("io.kotest:kotest-assertions-core:4.6.2")
-    testImplementation ("io.kotest:kotest-property:4.6.2")
+    testImplementation("io.kotest:kotest-assertions-core:4.6.2")
+    testImplementation("io.kotest:kotest-property:4.6.2")
 }
 
 tasks.test {
