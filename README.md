@@ -35,7 +35,9 @@
             - amount 를 private 으로
             - ~~달러 부작용~~ (달러 연산 시, dollar 값이 변경 되는 것)
             - Money round
-        - 어떤 금액(주가)을 어떤 수에 곱한 금액을 결과로 얻음
+            - ~~equals~~ (kotlin data class 에선 확인 필요 없음)
+            - ~~hashCode ~~ (kotlin data class 에선 확인 필요 없음)
+          - 어떤 금액(주가)을 어떤 수에 곱한 금액을 결과로 얻음
 ---
 
 ### TIL

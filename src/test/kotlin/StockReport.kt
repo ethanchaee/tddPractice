@@ -16,4 +16,8 @@ internal class StockReport : FunSpec({
         product = five.times(3)
         product.amount shouldBe 15
     }
+
+    test("equals 문제") {
+        Dollar(5) shouldBe Dollar(5)
+    }
 })
