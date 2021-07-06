@@ -3,10 +3,17 @@ import io.kotest.matchers.shouldBe
 
 internal class StockReport : FunSpec({
 
-    test("통화가 다른 두 금액을 더해서 주어진 환율에 맞게 변한 금액을 결과로 얻음") {
-        val dollar = Dollar(5)
-        dollar.times(2)
+    test("$5 X 2 = $10") {
+        val five = Dollar(5)
+        five.times(2)
+        five.amount shouldBe 10
+    }
 
-        dollar.amount shouldBe 10
+    test("Dollar 부작용") {
+        val five = Dollar(5)
+        var product = five.times(2)
+        product.amount shouldBe 10
+        product = five.times(3)
+        product.amount shouldBe 15
     }
 })
