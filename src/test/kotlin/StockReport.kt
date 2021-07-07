@@ -17,4 +17,9 @@ internal class StockReport : FunSpec({
     test("equals 문제") {
         Dollar(5) shouldBe Dollar(5)
     }
+
+    test("CHF 곱셈 계산") {
+        val five = Fran(5)
+        five.times(2).shouldBe(Fran(10))
+    }
 })
