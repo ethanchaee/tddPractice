@@ -32,7 +32,7 @@
         - 통화가 다른 두 금액을 더해서 주어진 환율에 맞게 변한 금액을 결과로 얻음
             - $5 + 10CHF = $10 (환율이 2:1 인 경우)
             - ~~$5 X 2 = $10~~
-            - amount 를 private 으로
+            - ~~amount 를 private 으로~~
             - ~~달러 부작용~~ (달러 연산 시, dollar 값이 변경 되는 것)
             - Money round
             - ~~equals~~ (kotlin data class 에선 확인 필요 없음)
