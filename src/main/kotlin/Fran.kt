@@ -1,9 +1,5 @@
-class Fran(private var amount: Int) {
+data class Fran(override var amount: Int) : Money(amount) {
     fun times(multiplier: Int): Fran {
         return Fran(amount * multiplier)
-    }
-
-    override fun equals(other: Any?): Boolean {
-        return (other as? Fran)?.amount == amount ?: false
     }
 }

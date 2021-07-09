@@ -1,5 +1,6 @@
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
+import io.kotest.matchers.shouldNotBe
 
 internal class StockReport : FunSpec({
 
@@ -21,5 +22,13 @@ internal class StockReport : FunSpec({
     test("CHF 곱셈 계산") {
         val five = Fran(5)
         five.times(2).shouldBe(Fran(10))
+    }
+
+    test("프랑과 달러 비교하기") {
+        Dollar(5) shouldBe Dollar(5)
+        Dollar(5) shouldNotBe Dollar(6)
+        Fran(5) shouldBe Fran(5)
+        Fran(5) shouldNotBe Fran(6)
+        Dollar(5) shouldNotBe Fran(5)
     }
 })

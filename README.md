@@ -37,6 +37,8 @@
             - Money round
             - ~~equals~~ (kotlin data class 에선 확인 필요 없음)
             - ~~hashCode ~~ (kotlin data class 에선 확인 필요 없음)
+            - ~~5CHF X 2 = 10CHF~~
+            - ~~프랑과 달러 비교하기~~
           - 어떤 금액(주가)을 어떤 수에 곱한 금액을 결과로 얻음
 ---
 
