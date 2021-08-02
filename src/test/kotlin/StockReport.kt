@@ -59,4 +59,15 @@ internal class StockReport : FunSpec({
         val result = bank.reduce(Money.dollar(1), "USD")
         result shouldBe Money.dollar(1)
     }
+
+    test("testReduceMoneyDifferentCurrency") {
+        val bank = Bank()
+        bank.addRate("CHF", "USD", 2)
+        val result = bank.reduce(Money.franc(2), "USD")
+        result shouldBe Money.dollar(1)
+    }
+
+    test("testIdentityRate") {
+        Bank().rate("USD", "USD") shouldBe 1
+    }
 })
