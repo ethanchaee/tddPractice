@@ -30,4 +30,12 @@ internal class StockReport : FunSpec({
         Money.dollar(1).currency() shouldBe "USD"
         Money.franc(1).currency() shouldBe "CHF"
     }
+
+    test("더하기 $5 + $5 = $10") {
+        val five = Money.dollar(5)
+        val sum = five.plus(five)
+        val bank = Bank()
+        val reduced = bank.reduce(sum, "USD")
+        reduced shouldBe Money.dollar(10)
+    }
 })
