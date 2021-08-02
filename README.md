@@ -29,11 +29,14 @@
         - 주와 가격 정보가 있을 경우 합계 정보 구하기
         - 주와 가격 정보, 화폐가 있을 경우 원하는 화폐로 합계 정보 구하기
     - by.Book
-      - $5 + 10CHF = $10 (환율이 2:1 인 경우)
-      - $5 + $5 = $10
+      - ~~$5 + 10CHF = $10 (환율이 2:1 인 경우)~~
+      - ~~$5 + $5 = $10~~
+      - $5 + $5 에서 Money 반환하기
       - ~~Bank.reduce(Money)~~
-      - Money에 대한 통화 변환을 수행하는 Reduce
-      - Reduce(Bank, String)
+      - ~~Money에 대한 통화 변환을 수행하는 Reduce~~
+      - ~~Reduce(Bank, String)~~
+      - Sum.plus
+      - Expression.times
       - ~~$5 X 2 = $10~~
       - ~~amount 를 private 으로~~
       - ~~달러 부작용~~ (달러 연산 시, dollar 값이 변경 되는 것)

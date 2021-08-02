@@ -7,7 +7,7 @@ open class Money(open var amount: Int, open val currency: String) : Expression {
         return false
     }
 
-    open fun times(multiplier: Int): Money {
+    open fun times(multiplier: Int): Expression {
         return Money(amount * multiplier, currency)
     }
 
