@@ -5,30 +5,26 @@ import io.kotest.matchers.shouldNotBe
 internal class StockReport : FunSpec({
 
     test("$5 X 2 = $10") {
-        val five = Dollar(5)
-        five.times(2) shouldBe Dollar(10)
+        val five = Money.dollar(5)
+        five.times(2) shouldBe Money.dollar(10)
     }
 
     test("Dollar 부작용 - 동치성 적용 이후") {
-        val five = Dollar(5)
-        five.times(2) shouldBe Dollar(10)
-        five.times(3) shouldBe Dollar(15)
-    }
-
-    test("equals 문제") {
-        Dollar(5) shouldBe Dollar(5)
+        val five: Money = Money.dollar(5)
+        five.times(2) shouldBe Money.dollar(10)
+        five.times(3) shouldBe Money.dollar(15)
     }
 
     test("CHF 곱셈 계산") {
-        val five = Fran(5)
-        five.times(2).shouldBe(Fran(10))
+        val five = Money.franc(5)
+        five.times(2).shouldBe(Money.franc(10))
     }
 
     test("프랑과 달러 비교하기") {
-        Dollar(5) shouldBe Dollar(5)
-        Dollar(5) shouldNotBe Dollar(6)
-        Fran(5) shouldBe Fran(5)
-        Fran(5) shouldNotBe Fran(6)
-        Dollar(5) shouldNotBe Fran(5)
+        Money.dollar(5) shouldBe Money.dollar(5)
+        Money.dollar(5) shouldNotBe Money.dollar(6)
+        Money.franc(5) shouldBe Money.franc(5)
+        Money.franc(5) shouldNotBe Money.franc(6)
+        Money.dollar(5) shouldNotBe Money.franc(5)
     }
 })
