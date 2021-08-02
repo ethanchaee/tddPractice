@@ -27,4 +27,9 @@ internal class StockReport : FunSpec({
         Money.franc(5) shouldNotBe Money.franc(6)
         Money.dollar(5) shouldNotBe Money.franc(5)
     }
+
+    test("통화 테스트") {
+        Money.dollar(1).currency() shouldBe "USD"
+        Money.franc(1).currency() shouldBe "CHF"
+    }
 })

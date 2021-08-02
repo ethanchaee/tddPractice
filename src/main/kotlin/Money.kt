@@ -1,4 +1,4 @@
-abstract class Money(open var amount: Int) {
+abstract class Money(open var amount: Int, open val currency: String) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other is Money) {
@@ -8,6 +8,8 @@ abstract class Money(open var amount: Int) {
     }
 
     abstract fun times(multiplier: Int): Money
+
+    fun currency() = currency
 
     companion object {
         fun dollar(amount: Int): Dollar {

@@ -42,6 +42,8 @@
       - 공용 times
       - ~~프랑과 달러 비교하기~~
       - 통화?
+      - testFrancMultiplication 제거
+    
 ---
 
 ### TIL
