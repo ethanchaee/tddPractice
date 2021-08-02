@@ -1,4 +1,4 @@
-open class Money(open var amount: Int, open val currency: String): Expression {
+open class Money(open var amount: Int, open val currency: String) : Expression {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other is Money) {
@@ -17,7 +17,9 @@ open class Money(open var amount: Int, open val currency: String): Expression {
         return "$amount $currency"
     }
 
-    fun plus(addend: Money): Expression = Money(amount + addend.amount, currency)
+    fun plus(addend: Money): Expression = Sum(this, addend)
+
+    override fun reduce(to: String) = this
 
     companion object {
         fun dollar(amount: Int) = Money(amount, "USD")

@@ -38,4 +38,25 @@ internal class StockReport : FunSpec({
         val reduced = bank.reduce(sum, "USD")
         reduced shouldBe Money.dollar(10)
     }
+
+    test("testPlusReturnSum") {
+        val five = Money.dollar(5)
+        val result: Expression = five.plus(five)
+        val sum: Sum = result as Sum
+        sum.augend shouldBe five
+        sum.addend shouldBe five
+    }
+
+    test("testReduceSum") {
+        val sum = Sum(Money.dollar(3), Money.dollar(4))
+        val bank = Bank()
+        val result = bank.reduce(sum, "USD")
+        result shouldBe Money.dollar(7)
+    }
+
+    test("testReduceMoney") {
+        val bank = Bank()
+        val result = bank.reduce(Money.dollar(1), "USD")
+        result shouldBe Money.dollar(1)
+    }
 })
