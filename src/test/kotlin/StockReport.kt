@@ -23,17 +23,11 @@ internal class StockReport : FunSpec({
     test("프랑과 달러 비교하기") {
         Money.dollar(5) shouldBe Money.dollar(5)
         Money.dollar(5) shouldNotBe Money.dollar(6)
-        Money.franc(5) shouldBe Money.franc(5)
-        Money.franc(5) shouldNotBe Money.franc(6)
         Money.dollar(5) shouldNotBe Money.franc(5)
     }
 
     test("통화 테스트") {
         Money.dollar(1).currency() shouldBe "USD"
         Money.franc(1).currency() shouldBe "CHF"
-    }
-
-    test("testDifferentClassEquality") {
-        Money(10, "CHF") shouldBe Franc(10, "CHF")
     }
 })
