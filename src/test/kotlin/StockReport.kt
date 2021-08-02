@@ -32,4 +32,8 @@ internal class StockReport : FunSpec({
         Money.dollar(1).currency() shouldBe "USD"
         Money.franc(1).currency() shouldBe "CHF"
     }
+
+    test("testDifferentClassEquality") {
+        Money(10, "CHF") shouldBe Franc(10, "CHF")
+    }
 })

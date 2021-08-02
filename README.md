@@ -38,10 +38,10 @@
       - hashCode
       - ~~5CHF X 2 = 10CHF~~
       - Dollar/Franc 중복
-      - 공용 equals
-      - 공용 times
+      - ~~공용 equals~~
+      - ~~공용 times~~
       - ~~프랑과 달러 비교하기~~
-      - 통화?
+      - ~~통화?~~
       - testFrancMultiplication 제거
     
 ---
